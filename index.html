@@ -12,6 +12,7 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <link rel="stylesheet" media="screen" href="css/style.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -47,7 +48,7 @@
         font-size: 14px;
         font-weight: 50; 
         font-family: Arial, Helvetica, sans-serif;
-        padding: 10px 20px; 
+        padding: 10px 20px;
       }
 
       .nav a.active {
@@ -59,6 +60,7 @@
         color: #f7941f;
         border-radius: 5px;
       }
+      /* end menu css */
 
       /* about us section */
       #about-us {
@@ -69,7 +71,7 @@
 
       @font-face {
         font-family: "ubuntu"; 
-        src: url("fonts/Ubuntu-B.ttf") format("truetype");
+        src: url("fonts/Ubuntu-B.ttf") format("truetype"); 
       }
 
       h1,
@@ -100,7 +102,9 @@
         margin-top: 20px;
         font-size: 18px;
       }
-      
+      /* end about us */
+
+      /* goals cores */
       .sections {
         max-width: 1200px;
         margin: 0 auto;
@@ -111,7 +115,7 @@
       .sections {
         display: flex; 
         justify-content: space-around; 
-        flex-wrap: wrap;
+        flex-wrap: wrap; 
         padding: 90px auto;
       }
 
@@ -119,9 +123,10 @@
         flex: 1; 
         max-width: 400px; 
         padding: 20px;
-        background-color: #f9f9f9;
+        background-color: #f9f9f9; 
         border-radius: 8px; 
-        margin: 10px;
+        margin: 10px; 
+        border: 1px solid #c0c0c0;
       }
 
       .section h2 {
@@ -146,7 +151,42 @@
         text-align: justify;
       }
 
+      /* end goals */
+
       /* our solutions */
+      .our-solutions {
+        position: relative; 
+        background-color: #282b2f; 
+        background-image: url("images/40512-6728c75503efa.webp");
+        background-size: cover;
+        background-position: center;
+        padding: 90px 20px; 
+        text-align: center; 
+      }
+
+      .our-solutions::before {
+        content: ""; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(
+          3,
+          65,
+          3,
+          0.9
+        ); 
+
+        z-index: 1; 
+      }
+
+      .our-solutions > div,
+      .our-solutions > .image-container,
+      .our-solutions > .section-container {
+        position: relative; 
+        z-index: 2; 
+      }
 
       .image-container {
         display: flex; 
@@ -157,7 +197,7 @@
         padding: 20px;
         justify-content: space-between;
         max-width: 1000px;
-        margin-left: auto; 
+        margin-left: auto;
         margin-right: auto; 
       }
 
@@ -181,25 +221,30 @@
       .image-wrapper img {
         width: 70%; 
 
-        transition: transform 0.3s;
+        transition: transform 0.3s; 
       }
+
+      /* end solutions */
 
       /* erp crm */
 
       .section-container {
-        display: flex;
-        justify-content: space-around; 
+        display: flex; 
+        justify-content: space-around;
         flex-wrap: wrap; 
         max-width: 1200px; 
         margin: 0 auto; 
+        padding-top: 30px;
       }
 
-      .section {
+      .section-container .section-2 {
         text-align: center; 
         margin: 20px; 
         width: 30%; 
-        padding: 20px; 
-        border-radius: 10px; 
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        border: 1px solid #fff;
       }
 
       .section-image {
@@ -208,15 +253,18 @@
         border-radius: 10px; 
       }
 
-      .section-title {
+      .section-2 .section-title {
         margin: 10px 0; 
         font-size: 1.5em; 
+        color: #f7941f;
       }
 
       .section-paragraph {
         font-size: 1em; 
-        color: #555; 
+        text-align: left;
       }
+
+      /* end erp crm */
 
       /* What we do */
 
@@ -229,9 +277,9 @@
       }
 
       .section-title {
-        font-size: 2rem; 
-        margin-bottom: 1rem;
-        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1rem; 
+        text-align: center; 
         color: #333; 
       }
 
@@ -252,65 +300,107 @@
         border-radius: 0 0 8px 8px; 
       }
 
+      
+
       /* footer */
       .footer {
-        background: linear-gradient(
-          to right,
-          #333,
-          #555
-        ); 
-        color: #fff; 
-        padding: 30px 20px; 
-        font-family: "Arial", sans-serif; 
-        position: relative; 
+        color: #fff;
+        padding: 30px 20px;
+        font-family: "Arial", sans-serif;
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
       }
 
       .footer-content {
-        display: flex; 
+        display: flex;
         justify-content: space-between;
-        align-items: flex-start; 
+        align-items: flex-start;
+        gap: 20px;
       }
 
       .footer-logo,
-      .footer-map {
-        width: 50%; 
-        margin: 10px; 
+      .footer-map,
+      .footer-menu {
+        flex: 1;
+        margin: 10px;
       }
 
       .footer-logo img {
-        width: 30%; 
-        height: auto; 
+        width: 30%;
+        height: auto;
       }
 
       .social-icons {
-        margin-top: 15px; 
+        margin-top: 15px;
       }
 
       .social-icons a {
         color: #f7941f;
-        margin: 0 10px; 
-        font-size: 1.5em; 
-        transition: color 0.3s, transform 0.3s; 
+        margin: 0 10px;
+        font-size: 1.5em;
+        transition: color 0.3s, transform 0.3s;
       }
 
       .social-icons a:hover {
-        color: #f7941f; 
-        transform: scale(1.2); 
+        color: #f7941f;
+        transform: scale(1.2);
+      }
+
+      .footer-menu h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .vertical-menu {
+        list-style: none;
+        padding: 0;
+      }
+
+      .vertical-menu li {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 20px; 
+        transition: all 0.3s ease;
+      }
+
+      .vertical-menu li::before {
+        content: "►"; 
+        position: absolute;
+        left: 0; 
+        font-size: 1.2em;
+        color: #f7941f;
+        transition: transform 0.3s ease; 
+      }
+
+      .vertical-menu a {
+        color: #f7941f;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .vertical-menu a:hover {
+        color: #ffff;
+      }
+
+      .footer-map h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
       }
 
       .mapouter {
-        position: relative; 
-        width: 100%; 
+        position: relative;
+        width: 100%;
         height: 100%;
-        border-radius: 8px; 
-        overflow: hidden; 
+        border-radius: 8px;
+        overflow: hidden;
       }
 
       .gmap_iframe {
         width: 100%;
-        height: 100%; 
-        border: 0; 
-        border-radius: 10px; 
+        height: 100%;
+        border: 0;
+        border-radius: 10px;
       }
 
       /* end footer */
@@ -437,16 +527,13 @@
     <div></div>
 
     <!-- our solutions -->
-    <div
-      style="background-color: #282b2f; padding: 90px 20px; text-align: center"
-    >
+    <div class="our-solutions">
       <div>
         <hr
           style="
             border: 0;
             height: 5px;
             background-color: #f7941f;
-
             width: 10%;
             margin: 0 auto;
           "
@@ -469,7 +556,7 @@
       </div>
 
       <div class="section-container">
-        <div class="section">
+        <div class="section-2">
           <img src="images/erp.png" alt="ERP Image" class="section-image" />
           <h3 class="section-title">CLOUD</h3>
           <p class="section-paragraph">
@@ -483,7 +570,7 @@
             the market.
           </p>
         </div>
-        <div class="section">
+        <div class="section-2">
           <img src="images/crm.png" alt="CRM Image" class="section-image" />
           <h3 class="section-title">CRM</h3>
           <p class="section-paragraph">
@@ -496,7 +583,7 @@
             customer relationships, sales, and marketing performance.
           </p>
         </div>
-        <div class="section">
+        <div class="section-2">
           <img src="images/erp (2).png" alt="Image 3" class="section-image" />
           <h3 class="section-title">ERP</h3>
           <p class="section-paragraph">
@@ -614,7 +701,7 @@
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Technology Provision and IT Consulting
+            Technology Provision and IT Consulting
             </button>
           </h2>
           <div
@@ -640,47 +727,65 @@
     </div>
     <!--end what we do -->
 
-    <!-- footer -->
     <!-- Footer -->
-    <div class="footer" id="contact">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="images/white-logo.png" alt="PinniSOFT Logo" />
-
-            <div class="social-icons">
-              <a href="https://www.facebook.com/Pinnisoft/"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a href="https://twitter.com/PinniSoft4Biz"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="https://www.linkedin.com/company/pinnisoft/"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <a href="https://www.youtube.com/channel/UCBOFPRGmtfB7JCa6TQhymFw"
-                ><i class="fab fa-youtube"></i
-              ></a>
+    <div style="background-color: #37393c">
+      <div class="footer" id="contact">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <img src="images/white-logo.png" alt="PinniSOFT Logo" />
+              <div class="social-icons">
+                <a href="https://www.facebook.com/Pinnisoft/"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="https://twitter.com/PinniSoft4Biz"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="https://www.linkedin.com/company/pinnisoft/"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/channel/UCBOFPRGmtfB7JCa6TQhymFw"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+              <p>
+                <i class="fas fa-phone"></i> (+256) 0200 919 620 | 0393 969
+                600<br />
+                <i class="far fa-envelope"></i> info@pinnisoft.com<br />
+                <i class="far fa-clock"></i> Mon-Friday: 08:00 - 17:00<br />
+                Saturday: 08:00 - 13:00<br />
+              </p>
             </div>
 
-            <p>
-              <i class="fas fa-phone"></i> (+256) 0200 919 620 | 0393 969 600<br />
-              <i class="far fa-envelope"></i> info@pinnisoft.com<br />
-              <i class="far fa-clock"></i> Mon-Friday: 08:00 - 17:00<br />
-              Saturday: 08:00 - 13:00<br />
-            </p>
-          </div>
-          <div class="footer-map">
-            <h1>Location</h1>
-            <p>
-              <i class="fas fa-map-marker-alt" style="padding-bottom: 20px"></i>
-              Plot 724/5 Theta House, Mawanda Road, Kampala-Uganda<br />
-            </p>
-            <div class="mapouter">
-              <iframe
-                class="gmap_iframe"
-                src="https://maps.google.com/maps?width=505&amp;height=500&amp;hl=en&amp;q=pinnisoft&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              ></iframe>
+            <div class="footer-menu">
+              <h1>Quick Links</h1>
+              <ul class="vertical-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#solutions">Our Solutions</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-map">
+              <h1>Location</h1>
+              <p>
+                <i
+                  class="fas fa-map-marker-alt"
+                  style="padding-bottom: 20px"
+                ></i>
+                <small>
+                  Plot 724/5 Theta House, Mawanda Road, Kampala-Uganda<br />
+                </small>
+              </p>
+              <div class="mapouter">
+                <iframe
+                  class="gmap_iframe"
+                  src="https://maps.google.com/maps?width=505&amp;height=500&amp;hl=en&amp;q=pinnisoft&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -688,9 +793,14 @@
     </div>
     <!-- End footer -->
 
-    <!-- end footer -->
-
-    <div style="background-color: #fff; padding: 20px; text-align: center">
+    <div
+      style="
+        background-color: #4b9f46;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      "
+    >
       <p>Copyright © 2023 PinniSOFT. All rights reserved.</p>
     </div>
 
